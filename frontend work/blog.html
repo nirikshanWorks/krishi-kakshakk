@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Tips & News - KrishiRakshak Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-hero { background: linear-gradient(135deg, #f0fdf4 0%, #f9fafb 100%); padding: 60px 20px; }
+        .blog-grid { display: grid; grid-template-columns: 1fr 300px; gap: 40px; margin-top: 40px; }
+        .posts-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        .blog-post { background: white; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; transition: all 0.3s; }
+        .blog-post:hover { box-shadow: 0 10px 28px rgba(22, 163, 74, 0.08); transform: translateY(-4px); }
+        .post-image { height: 200px; background: linear-gradient(135deg, #16a34a, #84cc16); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .post-content { padding: 24px; }
+        .post-date { color: var(--text-light); font-size: 0.9rem; margin-bottom: 8px; }
+        .post-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--text-color); }
+        .post-excerpt { color: var(--text-light); line-height: 1.6; margin-bottom: 16px; }
+        .post-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .post-category { background: linear-gradient(135deg, #16a34a, #15803d); color: white; padding: 4px 12px; border-radius: 4px; font-weight: 600; }
+        .read-more { color: var(--primary-color); font-weight: 600; cursor: pointer; }
+        .sidebar { display: flex; flex-direction: column; gap: 24px; }
+        .sidebar-widget { background: white; border: 1px solid var(--border-color); border-radius: 10px; padding: 24px; }
+        .widget-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+        .widget-item { padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+        .widget-item:last-child { border-bottom: none; }
+        .widget-link { color: var(--text-light); text-decoration: none; transition: color 0.25s; }
+        .widget-link:hover { color: var(--primary-color); }
+        @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } .posts-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>KrishiRakshak</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html" style="color: var(--primary-color);">Blog</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 12px;">Farming Tips, Market Updates & Success Stories</h1>
+            <p style="font-size: 1.1rem; color: var(--text-light); max-width: 600px;">Learn from experts and other farmers about better techniques, market trends, and how to maximize your harvest value.</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 20px;">
+        <div class="container">
+            <div class="blog-grid">
+                <div>
+                    <div class="posts-container">
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 28, 2026</div>
+                                <h3 class="post-title">Early Signs of Crop Pest Damage</h3>
+                                <p class="post-excerpt">Learn to spot pest damage before it spreads. Use our AI tool or follow these simple visual checks.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Farming Tips</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 25, 2026</div>
+                                <h3 class="post-title">Wheat Prices Up 12% This Month</h3>
+                                <p class="post-excerpt">Market analysis: Why prices are rising and what it means for your harvest planning.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Market News</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-cloud-rain"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 22, 2026</div>
+                                <h3 class="post-title">Monsoon Preparation Guide 2026</h3>
+                                <p class="post-excerpt">Complete checklist for preparing your fields for heavy rainfall season.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Seasonal Guide</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 20, 2026</div>
+                                <h3 class="post-title">Meet Priya: From ₹8/kg to ₹22/kg</h3>
+                                <p class="post-excerpt">How a farmer from Tamil Nadu tripled her income using direct marketplace connections.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Success Story</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 18, 2026</div>
+                                <h3 class="post-title">Water-Saving Irrigation Methods</h3>
+                                <p class="post-excerpt">Reduce water usage by 40% with these proven drip irrigation techniques.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Farming Tips</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-image">
+                                <i class="fas fa-money-bill"></i>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-date">June 15, 2026</div>
+                                <h3 class="post-title">Understanding MSP & Fair Pricing</h3>
+                                <p class="post-excerpt">Know your rights. Here's how MSP works and when you should negotiate above it.</p>
+                                <div class="post-meta">
+                                    <span class="post-category">Market News</span>
+                                    <span class="read-more">Read →</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Categories</h4>
+                        <div class="widget-item"><a class="widget-link" href="#">Farming Tips</a></div>
+                        <div class="widget-item"><a class="widget-link" href="#">Market News</a></div>
+                        <div class="widget-item"><a class="widget-link" href="#">Success Stories</a></div>
+                        <div class="widget-item"><a class="widget-link" href="#">Seasonal Guide</a></div>
+                        <div class="widget-item"><a class="widget-link" href="#">Government Schemes</a></div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Popular Posts</h4>
+                        <div class="widget-item">
+                            <a class="widget-link" href="#">AI Disease Detection Saves Crop</a>
+                            <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">342 reads</div>
+                        </div>
+                        <div class="widget-item">
+                            <a class="widget-link" href="#">Best Time to Sell Your Harvest</a>
+                            <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">298 reads</div>
+                        </div>
+                        <div class="widget-item">
+                            <a class="widget-link" href="#">Organic Certification Simplified</a>
+                            <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">276 reads</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget" style="background: linear-gradient(135deg, #f0fdf4, #f9fafb); border-color: var(--primary-color);">
+                        <h4 class="widget-title">Weekly Newsletter</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px;">Get market updates & farming tips every week</p>
+                        <input type="email" placeholder="Your email" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; margin-bottom: 12px; font-size: 0.9rem;">
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Marketplace</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KrishiRakshak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

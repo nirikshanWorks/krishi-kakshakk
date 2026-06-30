@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiRakshak - Agricultural Marketplace for Farmers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>KrishiRakshak</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Where Farmers Meet Smart <span>Markets</span></h1>
+            <p>Stop losing profits to middlemen. Connect directly with buyers, access real-time market intelligence, and grow your farming business.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('platform')">Get Started as a Farmer</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('platform')">I'm a Buyer</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>51k+</h3>
+                <p>Farmers using our platform</p>
+            </div>
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Trusted corporate buyers</p>
+            </div>
+            <div class="stat">
+                <h3>320+</h3>
+                <p>Regulated mandis connected</p>
+            </div>
+            <div class="stat">
+                <h3>15+</h3>
+                <p>Local languages supported</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <h2 class="section-title">The Real Problems Farmers Face</h2>
+            <p class="section-subtitle">Every day, hardworking farmers lose money to an outdated system</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Working the Hardest, Earning the Least</h3>
+                    <p>Farmers struggle with unpredictable weather, pest attacks, and market price fluctuations. Heavy dependence on middlemen significantly reduces their profits despite their backbreaking work.</p>
+                    <ul class="problem-points">
+                        <li>Price Exploitation from middlemen</li>
+                        <li>Zero Digital Reach</li>
+                        <li>Limited access to modern technology</li>
+                    </ul>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Incredible Products, Invisible Sellers</h3>
+                    <p>Self-help groups produce high-quality organic products but lack a permanent platform to sell them. Without digital presence and formal certifications, their reach remains limited.</p>
+                    <ul class="problem-points">
+                        <li>No permanent marketplace access</li>
+                        <li>Unverified Quality standards</li>
+                        <li>Limited buyer trust</li>
+                    </ul>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Willing to Pay, Unable to Trust</h3>
+                    <p>Buyers struggle to find verified, reliable sources of fresh produce. The broken supply chain makes it impossible to trace products to their origin or verify authenticity.</p>
+                    <ul class="problem-points">
+                        <li>Supply chain transparency issues</li>
+                        <li>Product authenticity verification</li>
+                        <li>Logistics complexity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section class="platform" id="platform">
+        <div class="container">
+            <h2 class="section-title">Built For Everyone In Agriculture</h2>
+            
+            <div class="roles-container">
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-sprout"></i>
+                    </div>
+                    <h3>Farmers</h3>
+                    <p>Grow smarter, earn more</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Sell directly to buyers — no middlemen cuts</li>
+                        <li><i class="fas fa-check"></i> AI detects crop diseases from a photo</li>
+                        <li><i class="fas fa-check"></i> Live mandi prices before you harvest</li>
+                        <li><i class="fas fa-check"></i> Weather alerts in your language</li>
+                        <li><i class="fas fa-check"></i> Know your exact profit per crop</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Buyers</h3>
+                    <p>Source verified, quality produce</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Direct access to verified farmers</li>
+                        <li><i class="fas fa-check"></i> Track your produce from farm to table</li>
+                        <li><i class="fas fa-check"></i> Bulk purchase at competitive prices</li>
+                        <li><i class="fas fa-check"></i> Transparent supply chain</li>
+                        <li><i class="fas fa-check"></i> No middleman markups</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Transporters</h3>
+                    <p>More loads, more income</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Consistent orders & steady income</li>
+                        <li><i class="fas fa-check"></i> Real-time shipment tracking</li>
+                        <li><i class="fas fa-check"></i> Optimized routes to save fuel</li>
+                        <li><i class="fas fa-check"></i> Direct payments to your account</li>
+                        <li><i class="fas fa-check"></i> Load management tools</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>SHGs & FPOs</h3>
+                    <p>Scale your products nationally</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Access national marketplace instantly</li>
+                        <li><i class="fas fa-check"></i> Help getting quality certifications</li>
+                        <li><i class="fas fa-check"></i> Build your brand online</li>
+                        <li><i class="fas fa-check"></i> Connect with bulk buyers</li>
+                        <li><i class="fas fa-check"></i> Reliable market access year-round</li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Four Simple Steps</h2>
+            <p class="section-subtitle">From signup to your first sale</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Sign Up</h3>
+                    <p>Create your account as a farmer, buyer, or transporter. Verify who you are. Takes 5 minutes.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h3>List What You Have</h3>
+                    <p>Farmers list crops. Buyers post what they need. Tell the world what you've got.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Connect & Negotiate</h3>
+                    <p>Buyers see your listing. You chat. Agree on price and quantity. Done deal.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Deliver & Get Paid</h3>
+                    <p>Arrange delivery. Money goes straight to your account. No middleman delays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Tools Built By Farmers, For Farmers</h2>
+            <p class="section-subtitle">Everything you actually need to make farming profitable</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Krishi Sahayak AI</h3>
+                    <p class="feature-badge">AI-Powered</p>
+                    <p>Sick crop? Take a photo. Our AI identifies diseases and pests instantly, then recommends treatment — all in your local language</p>
+                    <a href="#">See how it works →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Live Mandi Prices</h3>
+                    <p class="feature-badge">Real-Time</p>
+                    <p>See current prices from 320+ government regulated mandis across India. Know exactly when to sell for the best price</p>
+                    <a href="#">See prices →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Hyperlocal Weather</h3>
+                    <p class="feature-badge">Precision</p>
+                    <p>7-day forecasts tailored to your exact location. Know when rainfall is coming, when it's time to irrigate, when to harvest</p>
+                    <a href="#">Check weather →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Direct Marketplace</h3>
+                    <p class="feature-badge">Zero Commission</p>
+                    <p>List your crops once. Multiple buyers see them instantly. You keep 100% of the profit — we don't take a cut</p>
+                    <a href="#">Start selling →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Profit Calculator</h3>
+                    <p class="feature-badge">Finance</p>
+                    <p>Plug in your costs and selling price. Instantly see your profit margin before you commit to growing a crop</p>
+                    <a href="#">Calculate profit →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Farmer Portal</h3>
+                    <p class="feature-badge">News & Schemes</p>
+                    <p>Government schemes, mandi updates, farming tips, success stories — everything in one feed, in your language</p>
+                    <a href="#">Read news →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section class="mobile-app">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>Your Farm, In Your Pocket</h2>
+                    <p>Everything you need is in our mobile app. Check mandi prices in the morning. Negotiate with buyers over tea. Track weather for your fields. See your profit updates. All while sitting at home or at the farm.</p>
+                    <div class="app-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Live price updates from your phone</li>
+                            <li><i class="fas fa-check-circle"></i> AI disease detection with a photo</li>
+                            <li><i class="fas fa-check-circle"></i> Chat directly with buyers</li>
+                            <li><i class="fas fa-check-circle"></i> Everything in your local language</li>
+                            <li><i class="fas fa-check-circle"></i> Works even without internet (offline mode)</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary">Get App on Play Store</a>
+                </div>
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <i class="fas fa-mobile-alt" style="font-size: 80px; opacity: 0.3;"></i>
+                            <p style="text-align: center; margin-top: 10px;">Mobile App Preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <h2 class="section-title">Proof That It Works</h2>
+            <p class="section-subtitle">Real numbers from real farmers using our platform</p>
+            
+            <div class="impact-stats">
+                <div class="impact-card">
+                    <h3>51k+</h3>
+                    <p>Farmers earning more</p>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 85%;"></div></div>
+                </div>
+
+                <div class="impact-card">
+                    <h3>500+</h3>
+                    <p>Buyers sourcing directly</p>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 65%;"></div></div>
+                </div>
+
+                <div class="impact-card">
+                    <h3>320+</h3>
+                    <p>Mandis data integrated</p>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="impact-card">
+                    <h3>99.9%</h3>
+                    <p>System reliability</p>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 99%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">From Our Farmers & Buyers</h2>
+            <p class="section-subtitle">Hear directly from people using the platform</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <p class="story-text">"I went from selling to local middlemen for ₹15/kg to selling directly to buyers for ₹25/kg. That extra ₹10 per kg changed my family's life."</p>
+                    <h4>Ramesh Kumar</h4>
+                    <p class="story-role">Wheat Farmer, Punjab</p>
+                    <div class="story-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <p class="story-text">"As a buyer, I used to struggle finding verified organic sources. Now I get transparent traceability and quality assurance on everything."</p>
+                    <h4>Sita Devi</h4>
+                    <p class="story-role">SHG Leader, Maharashtra</p>
+                    <div class="story-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <p class="story-text">"Bypassing middlemen meant I kept more profit. The AI tool helped me catch crop disease before it spread. Best decision I made this year."</p>
+                    <h4>Amit Singh</h4>
+                    <p class="story-role">Farmer, Haryana</p>
+                    <div class="story-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Questions? We Have Answers</h2>
+            <p class="section-subtitle">Everything you need to get started</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Does it really cost nothing?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Signing up is free. Listing your crops is free. We don't charge commission on your sales either. You keep 100% of what you sell. We make money when buyers use premium features, not by taking cuts from farmers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How do I actually get paid?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once a buyer confirms they want your crops and they're delivered, payment goes straight to your bank account within 24-48 hours. No waiting weeks. No middleman delays. Direct transfer to whatever bank account you register with.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What if I don't have a smartphone?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can use our web version on any computer with internet. We also have phone support — call our helpline and agents can help you. Plus, we're working on SMS and voice call features so you can use the platform however works best for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How does transport work?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once a buyer confirms an order, you request transport through our app. Our network of verified transporters quotes prices. You pick one, they handle the delivery, and you pay them. It's transparent, tracked in real-time, and direct between you and the transporter.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What languages do you support?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support 15+ Indian languages including Hindi, Tamil, Telugu, Kannada, Marathi, Gujarati, Bengali, Punjabi, and more. You can switch your preferred language anytime in settings. The goal is for every farmer to feel comfortable using the platform in their own language.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How accurate is the AI crop disease detection?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI is trained on thousands of crop images and catches diseases with >90% accuracy. Just take a clear photo of the affected leaf or area, upload it, and get results in seconds. It suggests treatments and tells you where to get medicine. It's not 100% perfect but catches most problems early enough to save your crop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Marketplace</a></li>
+                        <li><a href="#">Mandi Prices</a></li>
+                        <li><a href="#">Weather Updates</a></li>
+                        <li><a href="#">Disease Detection</a></li>
+                        <li><a href="#">Profit Tracker</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>For</h4>
+                    <ul>
+                        <li><a href="#">Farmers</a></li>
+                        <li><a href="#">Buyers</a></li>
+                        <li><a href="#">Transporters</a></li>
+                        <li><a href="#">Self-Help Groups</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 KrishiRakshak. All rights reserved. | <span style="opacity: 0.6;">For every farmer in India</span></p>
+                <p style="margin-top: 8px; font-size: 0.8rem;">Powered by advanced agricultural technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

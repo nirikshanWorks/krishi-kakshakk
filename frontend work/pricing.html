@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - KrishiRakshak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .pricing-hero { background: linear-gradient(135deg, #f0fdf4 0%, #f9fafb 100%); padding: 80px 20px; text-align: center; }
+        .pricing-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
+        .pricing-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px; }
+        .pricing-toggle { display: flex; justify-content: center; gap: 16px; align-items: center; margin-bottom: 60px; }
+        .toggle-btn { background: white; border: 2px solid var(--border-color); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.25s; }
+        .toggle-btn.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-bottom: 60px; }
+        .price-card { background: white; border: 2px solid var(--border-color); border-radius: 10px; padding: 40px; transition: all 0.3s; position: relative; }
+        .price-card.featured { border-color: var(--primary-color); transform: scale(1.05); box-shadow: 0 20px 40px rgba(22, 163, 74, 0.15); }
+        .featured-badge { position: absolute; top: -12px; left: 20px; background: var(--primary-color); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+        .plan-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+        .plan-desc { color: var(--text-light); font-size: 0.9rem; margin-bottom: 20px; }
+        .plan-price { font-size: 3rem; font-weight: 800; color: var(--primary-color); margin-bottom: 8px; }
+        .plan-price small { font-size: 1rem; color: var(--text-light); }
+        .plan-features { list-style: none; margin: 32px 0; }
+        .plan-features li { padding: 10px 0; padding-left: 28px; position: relative; color: var(--text-color); }
+        .plan-features li i { position: absolute; left: 0; color: var(--primary-color); font-weight: 700; }
+        .plan-cta { display: block; width: 100%; padding: 14px; background: var(--primary-color); color: white; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; transition: all 0.25s; font-size: 1rem; }
+        .price-card.featured .plan-cta { background: var(--primary-color); }
+        .plan-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3); }
+        .comparison { background: white; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; margin-top: 60px; }
+        .comparison-title { background: var(--primary-color); color: white; padding: 32px 24px; text-align: center; font-size: 1.5rem; font-weight: 700; }
+        .comparison-table { width: 100%; }
+        .comparison-row { display: grid; grid-template-columns: 200px repeat(3, 1fr); border-bottom: 1px solid var(--border-color); }
+        .comparison-cell { padding: 16px; text-align: center; }
+        .comparison-row:first-child .comparison-cell { background: #f9fafb; font-weight: 700; }
+        .comparison-cell:first-child { text-align: left; font-weight: 600; background: #f9fafb; }
+        @media (max-width: 768px) { .price-card.featured { transform: scale(1); } .pricing-grid { grid-template-columns: 1fr; } .comparison-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>KrishiRakshak</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="pricing.html" style="color: var(--primary-color);">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>Simple, Fair Pricing</h1>
+            <p>All farmers get core features free. Premium options for those who want more.</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 20px;">
+        <div class="container">
+            <div class="pricing-toggle">
+                <button class="toggle-btn active">Monthly</button>
+                <button class="toggle-btn">Yearly (Save 20%)</button>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3 class="plan-name">Starter</h3>
+                    <p class="plan-desc">Perfect for new farmers</p>
+                    <div class="plan-price">₹0<small>/month</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> List up to 5 crops</li>
+                        <li><i class="fas fa-check"></i> Access live mandi prices</li>
+                        <li><i class="fas fa-check"></i> Weather alerts</li>
+                        <li><i class="fas fa-check"></i> Basic support</li>
+                        <li><i class="fas fa-times" style="color: #cbd5e1;"></i> AI disease detection</li>
+                        <li><i class="fas fa-times" style="color: #cbd5e1;"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="plan-cta" style="background: var(--border-color); color: var(--text-color);">Get Started Free</button>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3 class="plan-name">Professional</h3>
+                    <p class="plan-desc">For serious farmers</p>
+                    <div class="plan-price">₹299<small>/month</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Unlimited listings</li>
+                        <li><i class="fas fa-check"></i> Live mandi prices</li>
+                        <li><i class="fas fa-check"></i> Weather alerts + forecasts</li>
+                        <li><i class="fas fa-check"></i> AI disease detection</li>
+                        <li><i class="fas fa-check"></i> Profit calculator</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="plan-cta">Upgrade Now</button>
+                </div>
+
+                <div class="price-card">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-desc">For SHGs & FPOs</p>
+                    <div class="plan-price">Custom<small>/month</small></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Multi-user accounts</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                        <li><i class="fas fa-check"></i> 24/7 premium support</li>
+                    </ul>
+                    <button class="plan-cta" style="background: var(--border-color); color: var(--text-color);">Contact Sales</button>
+                </div>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-title">Feature Comparison</div>
+                <table class="comparison-table">
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">Features</td>
+                        <td class="comparison-cell">Starter</td>
+                        <td class="comparison-cell">Professional</td>
+                        <td class="comparison-cell">Enterprise</td>
+                    </tr>
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">Crop Listings</td>
+                        <td class="comparison-cell">5</td>
+                        <td class="comparison-cell">Unlimited</td>
+                        <td class="comparison-cell">Unlimited</td>
+                    </tr>
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">Mandi Prices</td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                    </tr>
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">AI Disease Detection</td>
+                        <td class="comparison-cell"></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                    </tr>
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">Advanced Analytics</td>
+                        <td class="comparison-cell"></td>
+                        <td class="comparison-cell"></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                    </tr>
+                    <tr class="comparison-row">
+                        <td class="comparison-cell">Priority Support</td>
+                        <td class="comparison-cell"></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                        <td class="comparison-cell"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f0fdf4, #f9fafb); border: 2px solid var(--primary-color); border-radius: 10px; padding: 40px; text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 16px;">No Hidden Fees. No Commission.</h3>
+                <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 24px;">We believe farmers should keep 100% of their earnings. Premium plans are just for optional tools.</p>
+                <button class="btn btn-primary">Start Free Trial</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KrishiRakshak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
